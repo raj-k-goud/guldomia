@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,12 +41,30 @@ class ProductsFragment: Fragment(), IproductContract.Iview  {
 
     fun initUI(view: View): View {
         productsRecycleView = view.findViewById(R.id.products_rv)
+        var modelSearch: SearchView = view.findViewById(R.id.model_search)
+        var makeSearch: SearchView = view.findViewById(R.id.make_search)
         productsAdapter = ProductsAdapter(productList)
-        productsRecycleView?.let { it
+        productsRecycleView?.let { it->
             it.layoutManager = LinearLayoutManager(activity?.applicationContext)
             it.adapter = productsAdapter
         }
+        searchOnQueryTextListener(modelSearch)
+        searchOnQueryTextListener(makeSearch)
         return view
+    }
+
+    private fun searchOnQueryTextListener(searchView: SearchView) {
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                productsAdapter!!.filter.filter(newText)
+                return false
+            }
+
+        })
     }
 
     override fun setProductData(productsList: ArrayList<ProductDataModel>) {

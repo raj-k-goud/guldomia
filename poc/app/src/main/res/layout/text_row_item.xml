@@ -19,7 +19,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/tacoma" />
+            android:src="@drawable/ic_tacoma" />
 
         <TextView
             android:id="@+id/title"
@@ -67,6 +67,7 @@
             android:id="@+id/pros_bullet_points"
             android:visibility="gone"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:layout_below="@id/pros"
             android:layout_width="match_parent"
@@ -89,6 +90,7 @@
             android:id="@+id/cons_bullet_points"
             android:visibility="gone"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
             android:layout_below="@id/cons"

@@ -1,6 +1,5 @@
 package com.test.poc.presenter
 
-import android.util.Log
 import com.test.poc.interactions.IproductContract
 import com.test.poc.model.ProductModel
 import com.test.poc.model.datamodels.ProductDataModel
