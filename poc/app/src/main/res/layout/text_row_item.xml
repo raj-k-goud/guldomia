@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/cars_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:background="@color/light_gray">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tacoma" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/icon"
+            android:text="Sample Text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_marginLeft="14dp"
+            android:textSize="14sp"
+            android:layout_toRightOf="@id/icon"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price : 120k"/>
+
+        <LinearLayout
+            android:id="@+id/rating_layout"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/price"
+            android:layout_toRightOf="@id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pros"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:textSize="14sp"
+            android:layout_below="@id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pros : "/>
+
+        <LinearLayout
+            android:id="@+id/pros_bullet_points"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/pros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cons"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pros_bullet_points"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="Cons : "
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/cons_bullet_points"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_below="@+id/cars_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"/>
+</RelativeLayout>
